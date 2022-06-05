@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+const getCurrentDate = () => {
+  const date = new Date();
+  return date.toDateString();
+
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const greetGuest = <h1>Welocme to the world of React!{`\n`}
+This is the historical day: {getCurrentDate()} where you started to learn React</h1>
 root.render(
   <React.StrictMode>
     <App />
